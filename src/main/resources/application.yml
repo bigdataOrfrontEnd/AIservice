@@ -1,0 +1,13 @@
+knife4j:
+  # 开启增强配置
+  enable: true
+  setting:
+    # 是否启用 Host
+    enable-host: true
+    # 启用 Host 地址
+    enable-host-text: "http://yunhu.wiki/api"
+  # 配置账号密码访问文档
+#  basic:
+#    enable: true
+#    username: admin
+#    password: 123456
