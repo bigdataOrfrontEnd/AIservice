@@ -1,12 +1,13 @@
+package org.com;
+
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.service.AiServices;
-import org.com.Main;
 import org.com.assistant.Assistant;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = {Main.class})
+@SpringBootTest()
 public class AIServiceTest {
     @Autowired
     private OllamaChatModel ollamaChatModel;
