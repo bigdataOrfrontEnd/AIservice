@@ -59,11 +59,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <version>1.18.30</version> <!-- 版本可根据需要调整 -->
             <scope>provided</scope>
         </dependency>
     </dependencies>
