@@ -16,7 +16,7 @@ public class AIServiceTest {
         //创建AIService
         Assistant assistant = AiServices.create(Assistant.class, ollamaChatModel);
         //调用service的接口
-        String answer = assistant.chat("java中@Autowired注解了，这个注解的功能就是为我们注入一个定义好的bean，这句话怎么理解");
+        String answer = assistant.chat("java");
         //输出结果
         System.out.println(answer);
     }

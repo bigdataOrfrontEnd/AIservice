@@ -13,5 +13,4 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 )
 public interface xiaozhiAgent {
     String chat(@MemoryId Long memoryId, @UserMessage String userMessage);
-
 }
