@@ -11,7 +11,7 @@ spring:
     # 调试的时候用，用于打印完成SQL语句(但是不打印参数),联合下面的logging.level一同打印最完整的SQL信息(语句+参数)
     show-sql: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
   servlet:
     multipart:
       max-file-size: 100MB # 最大支持文件大小
