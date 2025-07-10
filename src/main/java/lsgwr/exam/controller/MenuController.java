@@ -23,6 +23,7 @@ public class MenuController {
             List<MenuVO>menuAll=menuService.getMenuTree();
             resultVO = new ResultVO<>(0, "获取全部问题列表成功", menuAll);
         }catch (Exception e){
+            System.out.println(e);
             resultVO = new ResultVO<>(-1, "获取全部问题列表失败", null);
         }
         return resultVO;

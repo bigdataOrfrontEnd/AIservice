@@ -49,6 +49,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         System.out.println(uri);
         System.out.println("无需拦截的接口路径：" + authIgnoreUris);
         String[] authIgnoreUriArr = authIgnoreUris.split(",");
+
         // 登录和注册接口不需要进行token拦截和校验
         for (String authIgnoreUri : authIgnoreUriArr) {
             if (authIgnoreUri.equals(uri)) {
