@@ -1,9 +1,7 @@
 package lsgwr.exam.controller;
 
-import lsgwr.exam.Menu;
 import lsgwr.exam.service.MenuService;
 import lsgwr.exam.vo.MenuVO;
-import lsgwr.exam.vo.QuestionVo;
 import lsgwr.exam.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,12 +20,12 @@ public class MenuController {
     ResultVO<List<MenuVO>> getAllMenus() {
         ResultVO<List<MenuVO>>resultVO;
         try {
-            List<MenuVO>menuAll=menuService.getAllMenus();
+            List<MenuVO>menuAll=menuService.getMenuTree();
             resultVO = new ResultVO<>(0, "获取全部问题列表成功", menuAll);
         }catch (Exception e){
-
+            resultVO = new ResultVO<>(-1, "获取全部问题列表失败", null);
         }
-        return resultVO
+        return resultVO;
 
     }
 }

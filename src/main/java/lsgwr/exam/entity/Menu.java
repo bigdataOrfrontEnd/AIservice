@@ -1,4 +1,4 @@
-package lsgwr.exam;
+package lsgwr.exam.entity;
 
 import lombok.Getter;
 import lombok.Setter;
