@@ -22,14 +22,22 @@ public class MenuServiceImpl implements MenuService {
         return buildMenuTree(null);
     }
     private List<MenuVO> buildMenuTree(Long parentId) {
-        List<Menu> menus = menuRepository.findByParentId(parentId);
+        List<Menu> menus;
+        if (parentId == null) {
+            menus = menuRepository.findRootMenus();
+        } else {
+            menus = menuRepository.findByParentId(parentId);
+        }
         return menus.stream().map(menu -> {
             MenuVO vo = new MenuVO();
             BeanUtils.copyProperties(menu, vo);
+
+            // 查询子节点
             List<MenuVO> children = buildMenuTree(menu.getId());
             if (!children.isEmpty()) {
                 vo.setChildren(children);
             }
+
             return vo;
         }).collect(Collectors.toList());
     }
