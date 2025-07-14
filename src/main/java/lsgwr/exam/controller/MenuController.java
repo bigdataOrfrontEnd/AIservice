@@ -1,5 +1,7 @@
 package lsgwr.exam.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lsgwr.exam.service.MenuService;
 import lsgwr.exam.vo.MenuVO;
 import lsgwr.exam.vo.ResultVO;
@@ -12,10 +14,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/menu")
+@Api(tags = "menu APIs")
 public class MenuController {
     @Autowired
     private MenuService menuService;
 
+    @ApiOperation(value = "菜单信息")
     @GetMapping("/list")
     ResultVO<List<MenuVO>> getAllMenus() {
         ResultVO<List<MenuVO>>resultVO;
