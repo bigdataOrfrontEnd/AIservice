@@ -30,6 +30,7 @@ public class Question {
     private String questionDescription;
     private String questionOptionIds;
     private String questionAnswerOptionIds;
+    private String questionExamYear;
     /**
      * 创建时间, 设计表时设置了自动插入当前时间，无需在Java代码中设置了
      */

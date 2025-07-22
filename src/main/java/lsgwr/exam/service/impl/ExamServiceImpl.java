@@ -176,7 +176,7 @@ public class ExamServiceImpl implements ExamService {
         // 问题创建
         Question question = new Question();
         // 把能复制的属性都复制过来
-        BeanUtils.copyProperties(questionCreateVo, question);
+        BeanUtils.copyProperties(questionCreateVo, question);//将 VO 中字段与 Entity 中同名的字段赋值过去，避免手动逐个 set。
         // 设置下questionOptionIds和questionAnswerOptionIds，需要自己用Hutool生成下
         List<QuestionOption> questionOptionList = new ArrayList<>();
         List<QuestionOptionCreateVo> questionOptionCreateVoList = questionCreateVo.getQuestionOptionCreateVoList();

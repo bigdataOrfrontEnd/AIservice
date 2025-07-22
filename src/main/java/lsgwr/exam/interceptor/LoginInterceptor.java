@@ -58,6 +58,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
         // 注意要和前端适配Access-Token属性，前端会在登陆后的每个接口请求头加Access-Token属性
         String token = request.getHeader("Access-Token");
+//        String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsc2dfZXhhbSIsImlkIjoiNTg4OWZhOTJmMGNhNDFmMDhlZWY2ZWVmODU0YjY0NDQiLCJ1c2VybmFtZSI6InVzZXJfMTc2Mzk2Mzg4NTUiLCJhdmF0YXIiOiJodHRwOi8vZC5sYW5yZW50dWt1LmNvbS9kb3duL3BuZy8xOTA0L2J1c2luZXNzX2F2YXRhci84X2F2YXRhcl8yNzU0NTgzLnBuZyIsImlhdCI6MTc1MjY1Mjg3NCwiZXhwIjoxNzUyNzM5Mjc0fQ.uu0b_y4quFZYE-LLq7VjukQ_fJAh5oj5pXXxxC1t-bc";
         if (token == null) {
             // token不在header中时，也可能在参数中(RequestParam)
             token = request.getParameter("token");

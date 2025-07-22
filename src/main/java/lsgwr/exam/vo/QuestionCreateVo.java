@@ -18,6 +18,11 @@ public class QuestionCreateVo {
      */
     @JsonProperty("name")
     private String questionName;
+    /**
+     * 真题年限
+     */
+    @JsonProperty("qyr")
+    private String questionExamYear;
 
     @JsonProperty("desc")
     private String questionDescription;

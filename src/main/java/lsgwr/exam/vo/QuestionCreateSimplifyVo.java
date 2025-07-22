@@ -39,6 +39,11 @@ public class QuestionCreateSimplifyVo {
      */
     @JsonProperty("category")
     private Integer questionCategoryId;
+    /**
+     * 真题年限
+     */
+    @JsonProperty("qyr")
+    private String questionExamYear;
 
     /**
      * 创建选项 里添加的内容

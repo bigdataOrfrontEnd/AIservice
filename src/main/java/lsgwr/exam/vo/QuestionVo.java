@@ -23,7 +23,11 @@ public class QuestionVo {
 
     @JsonProperty("score")
     private Integer questionScore;
-
+    /**
+     * 真题年限
+     */
+    @JsonProperty("qyr")
+    private String questionExamYear;
     /**
      * 根据questionCreatorId查询创建人
      */
