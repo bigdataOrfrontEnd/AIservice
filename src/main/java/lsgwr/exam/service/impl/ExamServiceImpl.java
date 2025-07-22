@@ -387,7 +387,7 @@ public class ExamServiceImpl implements ExamService {
         String radioIdsStr = "";
         String checkIdsStr = "";
         String judgeIdsStr = "";
-        List<ExamQuestionSelectVo> radios = examCreateVo.getRadios();
+        List<ExamQuestionSelectVo> radios = examCreateVo.getRadios();//前端勾选的一条数据是有这个问题的Id的
         List<ExamQuestionSelectVo> checks = examCreateVo.getChecks();
         List<ExamQuestionSelectVo> judges = examCreateVo.getJudges();
         int radioCnt = 0, checkCnt = 0, judgeCnt = 0;
